@@ -1,0 +1,160 @@
+:root {
+    --brand-primary: #0d6efd;
+    --brand-primary-dark: #0a58ca;
+    --brand-radius: 0.5rem;
+}
+
+/* Global font */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                 Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-brand {
+    font-size: 1.15rem;
+    letter-spacing: 0.2px;
+}
+
+/* ---------- Table ---------- */
+.table > :not(caption) > * > * {
+    padding: 0.85rem 0.75rem;
+}
+
+.table tbody tr {
+    transition: background-color 0.15s ease-in-out;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.04);
+}
+
+/* Gender pill */
+.gender-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.gender-pill.male {
+    background-color: rgba(13, 110, 253, 0.12);
+    color: #084298;
+}
+
+.gender-pill.female {
+    background-color: rgba(220, 53, 69, 0.12);
+    color: #842029;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    border-radius: var(--brand-radius);
+}
+
+.btn-icon-only {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- Modals ---------- */
+.modal-content {
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- Form ---------- */
+.form-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.input-group-text {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border-right: 0;
+}
+
+.input-group .form-control {
+    border-left: 0;
+}
+
+.input-group .form-control:focus {
+    border-left: 0;
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.input-group:focus-within .input-group-text,
+.input-group:focus-within .form-control {
+    border-color: #86b7fe;
+}
+
+.input-group:focus-within .input-group-text {
+    color: var(--brand-primary);
+}
+
+/* ---------- Search ---------- */
+#searchInput:focus {
+    box-shadow: none;
+}
+
+.input-group:has(#searchInput:focus) {
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15) !important;
+    border-radius: var(--brand-radius);
+}
+
+/* ---------- Toast ---------- */
+.toast {
+    border-radius: 0.5rem;
+    min-width: 280px;
+}
+
+/* ---------- Empty state ---------- */
+#emptyState i {
+    opacity: 0.4;
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 576px) {
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    /* Buttons stack nicely on mobile */
+    #deleteAllBtn,
+    #addStudentBtn {
+        flex: 1;
+    }
+}
+
+/* ---------- Row fade-in animation ---------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.student-row {
+    animation: fadeIn 0.2s ease-in-out;
+}
