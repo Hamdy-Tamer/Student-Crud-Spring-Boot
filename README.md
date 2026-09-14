@@ -1,4 +1,4 @@
-# Student-Crud-SpringBoot
+# Student-Crud-Spring-Boot
 
 A simple RESTful CRUD API for managing student records, built with **Spring Boot**, **Spring Data JPA**, and **Bean Validation**. It supports creating, reading, fully updating, partially updating, and deleting students, with centralized exception handling and clean layered architecture.
 
